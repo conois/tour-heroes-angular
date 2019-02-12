@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from './hero'
-import { HEROES } from './mock-heroes'; 
+/* import { HEROES } from './mock-heroes'; */
 import { HeroService } from "../hero.service";
+
 
 
 @Component({
@@ -26,7 +27,8 @@ export class HeroesComponent implements OnInit {
   }
 
   /* Asigno a la variable iniciada, los valores que estoy trayendo del servicio */
+  /* Como transformé la peticion a un observable, tengo que suscribirme, de este modo queda asincrono */
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes()
+    this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes)
   }
 }
