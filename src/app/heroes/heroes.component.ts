@@ -22,9 +22,9 @@ export class HeroesComponent implements OnInit {
   }
 
   /* Void mean that this function don't return a value  */
-  onSelect(hero:Hero) : void {
+/*   onSelect(hero:Hero) : void {
     this.selectedHero = hero
-  }
+  } */
 
   /* Asigno a la variable iniciada, los valores que estoy trayendo del servicio */
   /* Como transformé la peticion a un observable, tengo que suscribirme, de este modo queda asincrono */
